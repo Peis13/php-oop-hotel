@@ -14,10 +14,12 @@ if ($risultati && $risultati->num_rows > 0) {
   }
 
 } elseif ($risultati) {
-  die("0 results");
+  // die("0 results");
+  throw new Exception('0 results');
 
 } else {
-  die("query error");
+  // die("query error");
+  throw new Exception('query error');
 }
 $conn->close();
 ?>
