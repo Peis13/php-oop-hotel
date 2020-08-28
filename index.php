@@ -2,7 +2,7 @@
 I dati anche qui non arrivano da db ma da un array. -->
 
 <?php
-require_once(__DIR__ . '/database.php');
+require_once(__DIR__ . '/server.php');
 require_once(__DIR__ . '/Stanza.php');
 
 foreach ($stanze as $stanza) {

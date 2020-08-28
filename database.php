@@ -1,28 +1,11 @@
 <?php
-$stanze = [
-  [
-    'id' => 1,
-    'room_number' => 100,
-    'floor' => 1,
-    'beds' => 2,
-    'created_at' => '2018-05-28',
-    'updated_at' => '2018-05-28',
-  ],
-  [
-    'id' => 2,
-    'room_number' => 101,
-    'floor' => 1,
-    'beds' => 3,
-    'created_at' => '2018-05-28',
-    'updated_at' => '2018-05-28',
-  ],
-  [
-    'id' => 3,
-    'room_number' => 102,
-    'floor' => 1,
-    'beds' => 3,
-    'created_at' => '2018-05-28',
-    'updated_at' => '2018-05-28',
-  ],
-];
+require_once(__DIR__ . '/env.php');
+
+// Connect
+$conn = new mysqli($server_name, $user_name, $password, $db_name);
+
+// Check connection
+if ($conn && $conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 ?>
